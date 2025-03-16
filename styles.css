@@ -42,6 +42,7 @@ body {
   font-weight: 500;
   font-style: normal;
   background-color: var(--Light-Grayish-Blue);
+  margin: 0;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -97,14 +98,14 @@ textarea:not([rows]) {
 .image-container {
   width: 100%;
   display: block;
-  border-radius: 15px;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
 }
 
 .image-container img {
   max-width: 100%;
   display: block;
   height: auto;
-  border-radius: 10px 10px 0 0;
 }
 
 .details-container {
@@ -194,7 +195,7 @@ textarea:not([rows]) {
 
 }
 
-.share-container p{
+.share-container p {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -209,6 +210,50 @@ textarea:not([rows]) {
 /*  display: none;*/
 /*}*/
 
-.share-container{
+.share-container {
   display: none;
 }
+
+/* Estilos para pantallas de hasta 1024px (tabletas y laptops pequeñas) */
+@media (min-width: 1024px) {
+
+  main{
+    display: grid;
+    place-items: center;
+    max-width: 1000px;
+    height: 100vh;
+    margin: auto;
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .image-container {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .details-container {
+    grid-column: span 3 / span 3;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    padding-right: 2.5rem;
+  }
+
+  .primary-text {
+    font-size: 1.5rem;
+  }
+
+}
+
+/* Estilos para pantallas de hasta 1440px (monitores grandes y laptops de alta resolución) */
+@media (max-width: 1440px) {
+
+}
+
+
+
