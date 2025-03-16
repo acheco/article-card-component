@@ -176,7 +176,7 @@ textarea:not([rows]) {
 
 /* Share Section */
 
-.share-container {
+.mobile-share-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -195,7 +195,7 @@ textarea:not([rows]) {
 
 }
 
-.share-container p {
+.mobile-share-container p {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -206,18 +206,15 @@ textarea:not([rows]) {
   margin-right: 1rem;
 }
 
-/*.avatar-container {*/
-/*  display: none;*/
-/*}*/
-
-.share-container {
-  display: none;
-}
 
 /* Estilos para pantallas de hasta 1024px (tabletas y laptops pequeñas) */
 @media (min-width: 1024px) {
 
-  main{
+  .share-popup {
+    display: block;
+  }
+
+  main {
     display: grid;
     place-items: center;
     max-width: 1000px;
@@ -248,12 +245,47 @@ textarea:not([rows]) {
     font-size: 1.5rem;
   }
 
+  /* SHARE POPUP SECTION */
+  .share-popup {
+    position: absolute;
+    bottom: 386px;
+    right: 24px;
+    background: var(--Very-Dark-Grayish-Blue);
+    color: var(--Light-Grayish-Blue);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .share-popup::after {
+    content: "";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 16px;
+    background: var(--Very-Dark-Grayish-Blue);
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+
 }
 
 /* Estilos para pantallas de hasta 1440px (monitores grandes y laptops de alta resolución) */
-@media (max-width: 1440px) {
+@media (min-width: 1440px) {
+  .share-popup {
+    bottom: 386px;
+    right: 231px;
+  }
 
 }
+
+.hidden{
+  display: none;
+}
+
 
 
 

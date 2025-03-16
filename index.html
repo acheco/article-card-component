@@ -58,33 +58,39 @@
         </div>
 
         <div class="share-button-container">
-          <button>
+          <button class="avatar-share-button">
             <img src="images/icon-share.svg" alt="Share button icon">
           </button>
         </div>
       </div>
       <!--  End avatar section    -->
 
-      <!--   Share section   -->
-      <div class="share-container">
-          <p>share</p>
+      <!-- Mobile Share section   -->
+      <div class="mobile-share-container hidden">
+        <p>share</p>
 
-          <div class="share-logos-container">
-            <img src="images/icon-facebook.svg" alt="facebook icon">
-            <img src="images/icon-twitter.svg" alt="twitter icon">
-            <img src="images/icon-pinterest.svg" alt="pinterest icon">
-          </div>
+        <div class="share-logos-container">
+          <img src="images/icon-facebook.svg" alt="facebook icon">
+          <img src="images/icon-twitter.svg" alt="twitter icon">
+          <img src="images/icon-pinterest.svg" alt="pinterest icon">
+        </div>
 
-          <div class="share-button-container">
-            <button>
-              <img src="images/icon-share.svg" alt="Share button icon">
-            </button>
-          </div>
+        <div class="share-button-container">
+          <button class="mobile-share-button">
+            <img src="images/icon-share.svg" alt="Share button icon">
+          </button>
+        </div>
       </div>
-      <!--   end share section   -->
+      <!--   end mobile share section   -->
     </div>
   </div>
 
+  <div class="share-popup hidden">
+    <span>SHARE</span>
+    <a href="#"><img src="images/icon-facebook.svg" alt="Facebook"></a>
+    <a href="#"><img src="images/icon-twitter.svg" alt="Twitter"></a>
+    <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest"></a>
+  </div>
 </main>
 
 
@@ -92,5 +98,7 @@
   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
   Coded by <a href="#">Antony Checo</a>.
 </div>
+
+<script src="index.js"></script>
 </body>
 </html>
